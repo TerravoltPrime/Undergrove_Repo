@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package terrablender.example;
+package com.terravolt.example;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,9 +33,9 @@ public class TestSurfaceRuleData
         SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
+        Object TestBiomes;
         return SurfaceRules.sequence(
-            SurfaceRules.ifTrue(SurfaceRules.isBiome(TestBiomes.HOT_RED), RED_TERRACOTTA),
-            SurfaceRules.ifTrue(SurfaceRules.isBiome(TestBiomes.COLD_BLUE), BLUE_TERRACOTTA),
+            SurfaceRules.ifTrue(SurfaceRules.isBiome(terrablender.example.TestBiomes.HOT_RED), RED_TERRACOTTA),
 
             // Default to a grass and dirt surface
             SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)

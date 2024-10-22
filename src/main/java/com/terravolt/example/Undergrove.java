@@ -26,12 +26,12 @@ import net.neoforged.fml.ModLoadingContext;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
-@Mod(TestMod.MOD_ID)
-public class TestMod
+@Mod(Undergrove.MOD_ID)
+public class Undergrove
 {
-    public static final String MOD_ID = "testmod";
+    public static final String MOD_ID = "undergrove";
 
-    public TestMod()
+    public Undergrove()
     {
         IEventBus bus = ModLoadingContext.get().getActiveContainer().getEventBus();
         bus.addListener(this::commonSetup);
@@ -42,7 +42,7 @@ public class TestMod
         event.enqueueWork(() ->
         {
             // Weights are kept intentionally low as we add minimal biomes
-            Regions.register(new TestRegion1( ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_1"), 2));
+            Regions.register(new terrablender.example.TestRegion1( ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_1"), 2));
 
             // Register our surface rules
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());

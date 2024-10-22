@@ -17,6 +17,7 @@
  */
 package terrablender.example;
 
+import com.terravolt.example.Undergrove;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -29,6 +30,6 @@ public class TestBiomes
 
     private static ResourceKey<Biome> register(String name)
     {
-        return ResourceKey.create(Registries.BIOME, new ResourceLocation(TestMod.MOD_ID, name));
+        return ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Undergrove.MOD_ID, name));
     }
 }
