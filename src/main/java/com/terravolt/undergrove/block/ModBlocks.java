@@ -19,11 +19,9 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Undergrove.MOD_ID);
 
-    public static final DeferredBlock<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-    public static final DeferredBlock<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
+
+    public static final DeferredBlock<Block> Cinnabar = registerBlock("cinnabar",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
                     BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 

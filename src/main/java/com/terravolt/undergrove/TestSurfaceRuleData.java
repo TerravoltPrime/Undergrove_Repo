@@ -17,9 +17,13 @@
  */
 package com.terravolt.undergrove;
 
+import com.terravolt.undergrove.block.ModBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
+import terrablender.example.TestBiomes;
+
+import static net.minecraft.world.item.Items.RED_TERRACOTTA;
 
 public class TestSurfaceRuleData
 {
@@ -33,12 +37,11 @@ public class TestSurfaceRuleData
         SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
-        Object TestBiomes;
         return SurfaceRules.sequence(
-            SurfaceRules.ifTrue(SurfaceRules.isBiome(terrablender.example.TestBiomes.EVER_HOLLOW), RED_TERRACOTTA),
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(TestBiomes.EVER_HOLLOW), GRASS_BLOCK),
 
-            // Default to a grass and dirt surface
-            SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
+                // Default to a grass and dirt surface
+                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
         );
     }
 

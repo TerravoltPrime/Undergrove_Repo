@@ -19,12 +19,14 @@
     "water_color": 4159204,
     "water_fog_color": 329011
   },
-  "features": [
+  "features":  [
     [
-      "minecraft:lush_caves_ceiling_vegetation" ],
+      "minecraft:patch_grass_forest"
+    ],
     [
-      "minecraft:patch_grass_plain"
-    ]
+      "minecraft:lush_caves_ceiling_vegetation"
+    ],
+    []
   ],
   "has_precipitation": false,
   "spawn_costs": {},
