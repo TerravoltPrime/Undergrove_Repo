@@ -1,7 +1,9 @@
 {
   "carvers": {     "air": [
     "minecraft:cave",
-    "minecraft:cave_extra_underground"
+
+    "undergrove:undergrove_1"
+
   ]
   },
   "downfall": 0.0,
@@ -19,11 +21,9 @@
   },
   "features": [
     [
-
       "minecraft:lush_caves_ceiling_vegetation" ],
-
     [
-
+      "minecraft:patch_grass_plain"
     ]
   ],
   "has_precipitation": false,

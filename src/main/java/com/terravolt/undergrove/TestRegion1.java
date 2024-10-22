@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package terrablender.example;
+package com.terravolt.undergrove;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
@@ -45,13 +45,13 @@ public class TestRegion1 extends Region
         // Overlap Vanilla's parameters with our own for our COLD_BLUE biome.
         // The parameters for this biome are chosen arbitrarily.
         new ParameterPointListBuilder()
-            .temperature(Temperature.span(Temperature.COOL, Temperature.FROZEN))
+            .temperature(Temperature.span(Temperature.NEUTRAL, Temperature.HOT))
             .humidity(Humidity.span(Humidity.ARID, Humidity.DRY))
             .continentalness(Continentalness.INLAND)
             .erosion(Erosion.EROSION_0, Erosion.EROSION_1)
             .depth(Depth.SURFACE, Depth.FLOOR)
             .weirdness(Weirdness.MID_SLICE_NORMAL_ASCENDING, Weirdness.MID_SLICE_NORMAL_DESCENDING)
-            .build().forEach(point -> builder.add(point, terrablender.example.TestBiomes.COLD_BLUE));
+            .build().forEach(point -> builder.add(point, terrablender.example.TestBiomes.EVER_HOLLOW));
 
         // Add our points to the mapper
         builder.build().forEach(mapper);

@@ -15,35 +15,21 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package com.terravolt.example;
+package terrablender.example;
 
-import com.mojang.datafixers.util.Pair;
-import net.minecraft.core.Registry;
+import com.terravolt.undergrove.Undergrove;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
-import net.minecraft.world.level.biome.Climate;
-import terrablender.api.Region;
-import terrablender.api.RegionType;
-import terrablender.example.TestBiomes;
 
-import java.util.function.Consumer;
-
-public class TestRegion2 extends Region
+public class TestBiomes
 {
-    public TestRegion2(ResourceLocation name, int weight)
-    {
-        super(name, RegionType.OVERWORLD, weight);
-    }
+    public static final ResourceKey<Biome> EVER_HOLLOW = register("ever_hollow");
+    public static final ResourceKey<Biome> COLD_BLUE = register("cold_blue");
 
-    @Override
-    public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper)
+    private static ResourceKey<Biome> register(String name)
     {
-        this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
-            // Simple example:
-            // Replace the Vanilla desert with our hot_red biome
-            builder.replaceBiome(Biomes.DRIPSTONE_CAVES, TestBiomes.EVER_HOLLOW);
-        });
+        return ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Undergrove.MOD_ID, name));
     }
 }

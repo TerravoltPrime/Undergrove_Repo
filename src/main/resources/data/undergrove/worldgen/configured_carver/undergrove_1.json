@@ -12,17 +12,7 @@
       },
       "barrier_state": {
         "Name": "minecraft:glass"
-      },
-      "lava_state": {
-        "Name": "minecraft:orange_stained_glass"
-      },
-      "water_state": {
-        "Name": "minecraft:candle",
-        "Properties": {
-          "candles": "1",
-          "lit": "false",
-          "waterlogged": "false"
-        }
+
       }
     },
     "floor_level": {
@@ -32,7 +22,7 @@
     },
     "horizontal_radius_multiplier": {
       "type": "minecraft:uniform",
-      "max_exclusive": 1.4,
+      "max_exclusive": 12.4,
       "min_inclusive": 0.7
     },
     "lava_level": {
@@ -56,7 +46,7 @@
     },
     "yScale": {
       "type": "minecraft:uniform",
-      "max_exclusive": 0.9,
+      "max_exclusive": 0.3,
       "min_inclusive": 0.1
     }
   }
