@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package terrablender.example;
+package com.terravolt.example;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.Registry;
@@ -26,6 +26,7 @@ import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
 import terrablender.api.Region;
 import terrablender.api.RegionType;
+import terrablender.example.TestBiomes;
 
 import java.util.function.Consumer;
 
@@ -42,7 +43,7 @@ public class TestRegion2 extends Region
         this.addModifiedVanillaOverworldBiomes(mapper, builder -> {
             // Simple example:
             // Replace the Vanilla desert with our hot_red biome
-            builder.replaceBiome(Biomes.DESERT, TestBiomes.HOT_RED);
+            builder.replaceBiome(Biomes.DRIPSTONE_CAVES, TestBiomes.EVER_HOLLOW);
         });
     }
 }

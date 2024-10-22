@@ -20,6 +20,7 @@ package com.terravolt.example;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
+import terrablender.example.TestBiomes;
 
 public class TestSurfaceRuleData
 {
@@ -35,7 +36,7 @@ public class TestSurfaceRuleData
 
         Object TestBiomes;
         return SurfaceRules.sequence(
-            SurfaceRules.ifTrue(SurfaceRules.isBiome(terrablender.example.TestBiomes.HOT_RED), RED_TERRACOTTA),
+            SurfaceRules.ifTrue(SurfaceRules.isBiome(terrablender.example.TestBiomes.EVER_HOLLOW), RED_TERRACOTTA),
 
             // Default to a grass and dirt surface
             SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
