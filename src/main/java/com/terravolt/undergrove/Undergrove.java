@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package com.terravolt.example;
+package com.terravolt.undergrove;
 
 import net.minecraft.resources.ResourceLocation;
 
@@ -42,7 +42,7 @@ public class Undergrove
         event.enqueueWork(() ->
         {
             // Weights are kept intentionally low as we add minimal biomes
-            Regions.register(new terrablender.example.TestRegion1( ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_1"), 2));
+            Regions.register(new com.terravolt.undergrove.TestRegion1( ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_1"), 2));
 
             // Register our surface rules
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());
