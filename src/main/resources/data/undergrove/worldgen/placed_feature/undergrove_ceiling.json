@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:moss_patch_ceiling",
+  "feature": "undergrove:rock_ceiling",
   "placement": [
     {
       "type": "minecraft:count",

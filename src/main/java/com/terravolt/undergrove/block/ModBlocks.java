@@ -19,9 +19,13 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(Undergrove.MOD_ID);
 
+    public static final DeferredBlock<Block> LUMENSHROOM = registerBlock("lumenshroom",
+            () -> new DropExperienceBlock(UniformInt.of(2, 4),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
-    public static final DeferredBlock<Block> Cinnabar = registerBlock("cinnabar",
+
+    public static final DeferredBlock<Block> CINNABAR = registerBlock("cinnabar",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
                     BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
