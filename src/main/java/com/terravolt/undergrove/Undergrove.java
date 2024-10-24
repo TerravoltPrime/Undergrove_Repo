@@ -81,7 +81,7 @@ public class Undergrove {
             event.enqueueWork(() ->
             {
                 // Weights are kept intentionally low as we add minimal biomes
-                Regions.register(new com.terravolt.undergrove.TestRegion1( ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_1"), 2));
+                Regions.register(new com.terravolt.undergrove.TestRegion1( ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_1"), 20));
 
                 // Register our surface rules
                 SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, TestSurfaceRuleData.makeRules());

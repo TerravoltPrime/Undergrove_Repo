@@ -21,7 +21,7 @@
   },
   "features":  [
     [
-      "minecraft:patch_grass_forest"
+      "undergrove:everhollow_vegetation"
     ],
     [
       "undergrove:undergrove_ceiling"

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "all": "undergrove:block/lumenshroom"
+    "cross": "undergrove:block/lumenshroom"
   }
 }
